@@ -16,7 +16,7 @@ function setup(time){
     canPlay = true;
     snake = new Snake();
     mouse = new Mouse();
-    mouse.mouseLocation();
+    mouse.randomMouseSpawn();
 
     if(interval){
         window.clearInterval(interval);
@@ -29,7 +29,7 @@ function setup(time){
         mouse.draw();
 
         if(snake.eat(mouse)){
-            mouse.mouseLocation();
+            mouse.randomMouseSpawn();
         }
 
         snake.eatItself();
