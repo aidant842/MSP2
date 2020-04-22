@@ -38,6 +38,7 @@ function setup(time){
     }, time);
 };
 
+//Listener for key press to change snakes direction
 window.addEventListener('keydown', (function(keyPress){
     const direction = keyPress.key;
     if(canPlay === true){
@@ -47,6 +48,8 @@ window.addEventListener('keydown', (function(keyPress){
 
 }));
 
+
+// Mobile Controls
 document.getElementById('buttonRight').onclick = function(){
     if(canPlay === true){
         snake.moveRight();
