@@ -1,0 +1,7 @@
+fix highscore ------- done
+
+try add rotate snake head ------- tried and failed :(
+
+fix sounds for mobile controls
+
+fix sounds for safari/ios and firefox

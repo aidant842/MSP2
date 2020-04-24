@@ -30,8 +30,10 @@ html{
     padding: 15px;
   }
 
-  #instructions{
-    color: white;
+  .instructionsContainer{
+    color: #a2f10b;
+      text-shadow: 0 1px 1px rgba(0,0,0,0.1), 0 0 5px rgba(181,232,83,0.1), 0 0 10px rgba(181,232,83,0.1);
+      -webkit-font-smoothing: antialiased;
     text-align: center;
     list-style: none;
     position: relative;
@@ -59,7 +61,7 @@ html{
     .col-s-11 {width: 91.66%;}
     .col-s-12 {width: 100%;}
 
-    #instructions{
+    .instructionsContainer{
       font-size: 1.5rem;
   }
   }
@@ -79,8 +81,10 @@ html{
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
 
-    #instructions{
-      color: white;
+    .instructionsContainer{
+      color: #a2f10b;
+      text-shadow: 0 1px 1px rgba(0,0,0,0.1), 0 0 5px rgba(181,232,83,0.1), 0 0 10px rgba(181,232,83,0.1);
+      -webkit-font-smoothing: antialiased;
       text-align: center;
       list-style: none;
       position: relative;
@@ -94,7 +98,7 @@ html{
     display: none;
   }
 
-  img{
+  .controllerContainer img{
     display: none;
   }
 
@@ -107,7 +111,9 @@ html{
   }
 
   .mainHeading{
-      color: white;
+      color: #a2f10b;
+      text-shadow: 0 1px 1px rgba(0,0,0,0.1), 0 0 5px rgba(181,232,83,0.1), 0 0 10px rgba(181,232,83,0.1);
+      -webkit-font-smoothing: antialiased;
       text-align: center;
   }
 
@@ -125,20 +131,24 @@ html{
 
   /* Dropdown Button */
 .dropbtn {
+    font-family: 'pixels', sans-serif;
     position: relative;
-    left: 6rem;
-    bottom: 11rem;
-    background-color: transparent;
+    left: 5rem;
+    bottom: 12rem;
+    background-color: rgba(0,0,0,0.7);
     color: white;
+      text-shadow: 0 1px 1px rgba(0,0,0,0.1), 0 0 5px rgba(181,232,83,0.1), 0 0 10px rgba(181,232,83,0.1);
+      -webkit-font-smoothing: antialiased;
     padding: 16px;
-    font-size: 1rem;
+    font-size: 2rem;
     border: none;
     cursor: pointer;
   }
   
   /* Dropdown button on hover & focus */
   .dropbtn:hover, .dropbtn:focus {
-    background-color: transparent;
+    background-color: rgba(0,0,0,0.7);
+    outline: none;
   }
   
   /* The container <div> - needed to position the dropdown content */
@@ -150,11 +160,11 @@ html{
   /* Dropdown Content (Hidden by Default) */
   .dropdown-content {
     text-align: center;
-    left: 4.5rem;
-    bottom: 4.6rem;
+    left: 4.7rem;
+    bottom: 6.15rem;
     display: none;
     position: absolute;
-    background-color: transparent;
+    background-color: rgba(0,0,0,0.7);
     min-width: 10rem;
     /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
     z-index: 1;
@@ -163,13 +173,15 @@ html{
   /* Links inside the dropdown */
   .dropdown-content a {
     color: white;
+      text-shadow: 0 1px 1px rgba(0,0,0,0.1), 0 0 5px rgba(181,232,83,0.1), 0 0 10px rgba(181,232,83,0.1);
+      -webkit-font-smoothing: antialiased;
     padding: 6px 16px;
     text-decoration: none;
     display: block;
   }
   
   /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #181818}
+  .dropdown-content a:hover {background-color: rgba(0,0,0,0.5)}
   
   /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
   .show {display:block;}
@@ -183,8 +195,16 @@ html{
   .canvas{
       border: 1px solid white;
       position: relative;
-      background-color: #252627;
+      /* background-color: #252627; */
       clear: none;
+      background-color: #186f1d;
+      background-image: -webkit-gradient(45deg, 0 0, 0 100%, color-stop(.5, rgba(255, 255, 255, .2)), color-stop(.5, transparent), to(transparent));
+      background-image: -moz-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+      background-image: -o-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+      background-image: linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+      -webkit-background-size: 50px 50px;
+      -moz-background-size: 50px 50px;
+      background-size: 40px 40px;
   }
 
   .highScore{
@@ -192,7 +212,9 @@ html{
       margin-left: 10rem;
       /* left: 55%; */
       bottom: -2.3rem;
-      color: white;
+      color: #a2f10b;
+      text-shadow: 0 1px 1px rgba(0,0,0,0.1), 0 0 5px rgba(181,232,83,0.1), 0 0 10px rgba(181,232,83,0.1);
+      -webkit-font-smoothing: antialiased;
       clear: none;
       padding: 0;
   }
@@ -201,7 +223,9 @@ html{
       position: relative;
       margin-left: 1rem;
       padding: 0;
-      color: white;
+      color: #a2f10b;
+      text-shadow: 0 1px 1px rgba(0,0,0,0.1), 0 0 5px rgba(181,232,83,0.1), 0 0 10px rgba(181,232,83,0.1);
+      -webkit-font-smoothing: antialiased;
       clear: none;
   }
 
@@ -230,7 +254,6 @@ html{
     width: 3.5rem;
     z-index: 10;
     border: none;
-    
   }
 
   #buttonDown{
@@ -242,7 +265,6 @@ html{
     width: 3.5rem;
     z-index: 10;
     border: none;
-   
   }
 
   #buttonLeft{
@@ -263,4 +285,19 @@ html{
     width: 15rem;
   }
 
+  .mainHeading img:nth-child(1){
+    position: relative;
+    bottom: -0.3rem;
+    width: 57px;
+    height: 33px;
+  }
+
+  .mainHeading img:nth-child(2){
+    height: 25px;
+    width: 30px;
+    bottom: 0;
+  }
   
+  #instructions{
+    list-style: none;
+  }

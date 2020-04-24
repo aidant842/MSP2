@@ -28,12 +28,12 @@ function setup(time){
         snake.draw();
         mouse.draw();
 
-        if(snake.eat(mouse)){
+        if(snake.eatMouse(mouse)){
             mouse.randomMouseSpawn();
         }
 
         snake.eatItself();
-        document.querySelector('.score').innerText = 'Score: ' + snake.total;
+        document.querySelector('.score').innerText = 'Score: ' + snake.miceAte;
 
     }, time);
 };

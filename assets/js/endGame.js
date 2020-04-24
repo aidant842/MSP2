@@ -3,8 +3,8 @@ var highScore = 0;
 
 //function for highScore
 function bestScore() {
-    if (snake.total > highScore) {
-        highScore = snake.total;
+    if (snake.miceAte > highScore) {
+        highScore = snake.miceAte;
     }
     return highScore;
 }
@@ -14,12 +14,12 @@ function bestScore() {
 function End() {
     var gameOver = new Audio('assets/sounds/gameOver.wav');
     gameOver.play();
-    document.querySelector('.highSore').innerText = 'HighScore: ' + bestScore();
+    document.querySelector('.highScore').innerText = 'HighScore: ' + bestScore();
     snake.x = 0;
     snake.y = 0;
     snake.xSpeed = 0;
     snake.ySpeed = 0;
-    snake.total = 0;
+    snake.miceAte = 0;
     snake.snakeSize = [];
     this.gameOver();
 }

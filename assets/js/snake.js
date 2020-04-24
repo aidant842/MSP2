@@ -1,45 +1,45 @@
-//Declaring Snake Function
+//declaring snake function
 function Snake() {
     this.x = 0;
     this.y = 0;
     this.xSpeed = 0;
     this.ySpeed = 0;
-    this.total = 0;
+    this.miceAte = 0;
     this.snakeSize = [];
     var snakeTop = new Image();
-    snakeTop.sec = 'assets/images/head.png';
+    snakeTop.src = "assets/images/head.png"
+
 
     //Function to draw snake on canvas
     this.draw = function () {
-        ctx.fillStyle = 'green';
+        ctx.fillStyle = "green";
         ctx.lineWidth = 1;
-        ctx.strokeStyle = 'black';
+        ctx.strokeStyle = "black";
 
-        //draw snake at position 0, 0 using snakeTop image
+
         ctx.drawImage(snakeTop, this.x, this.y, scale, scale);
 
-        //while i is greater than length of snakeSize array draw box behind snake to add to tail
+        //loop through snakeSize arrays length and draw each box at its x and y 
         for (let i = 0; i < this.snakeSize.length; i++) {
-            ctx.fillRect(this.snakeSize[i].x, this.snakeSize[i].y, scale, scale);
+            ctx.drawImage(this.snakeSize[i].x, this.snakeSize[i].y, scale, scale);
             ctx.strokeRect(this.snakeSize[i].x, this.snakeSize[i].y, scale, scale);
         }
     }
 
-    //function to call updates on snake to check status of snake
+    //function to check for changes to the snake
     this.update = function () {
 
-        //adding to snakeSize array
-        for (let i = 0; i < snakeSize.length; i++) {
+        //moves tail to the left
+        for (let i = 0; i < this.snakeSize.length - 1; i++) {
             this.snakeSize[i] = this.snakeSize[i + 1];
         }
-        //add at snakes location
-        this.snakeSize[this.total - 1] = { x: (this.x), y: (this.y) };
 
-        //snakes speed
+        //add the new box to the tail
+        this.snakeSize[this.miceAte - 1] = { x: (this.x), y: (this.y) };
+
         this.x = this.x + this.xSpeed;
         this.y = this.y + this.ySpeed;
 
-        //check if snake goes outside of canvas
         if (this.x > canvas.width) {
             End();
         }
@@ -48,19 +48,17 @@ function Snake() {
             End();
         }
 
-        else if (this.x > canvas.height) {
+        else if (this.y > canvas.height) {
             End();
         }
 
-        else if (this.x < 0) {
+        else if (this.y < 0) {
             End();
         }
-
-
     }
 
 
-    //directional functions
+
     this.moveUp = function () {
         if (this.ySpeed != (scale * 1)) {
             this.xSpeed = 0;
@@ -101,35 +99,34 @@ function Snake() {
         }
     }
 
-    //direction function for pc use with arrow keys
-    this.changeDirection = function (direction) {
-        var arrowSound = new Audio('assets/sounds/arrowPress.wav');
-        arrowSound.play();
 
+
+    this.changeDirection = function (direction) {
+        var arrowSound = new Audio("assets/sounds/arrowPress.wav");
+        arrowSound.play();
         if (direction === 'ArrowUp') {
             this.moveUp();
         }
-
         if (direction === 'ArrowRight') {
             this.moveRight();
         }
-
         if (direction === 'ArrowDown') {
             this.moveDown();
         }
-
         if (direction === 'ArrowLeft') {
             this.moveLeft();
         }
     }
 
-    //function for checking if mouse was ate, add to snakes size if it does
+
+
+
     this.eatMouse = function (mouse) {
-        var mouseAte = new Audio('assets/sounds/shortEat.wav');
+        var mouseAte = new Audio("assets/sounds/shortEat.wav");
 
         if (this.x === mouse.x && this.y === mouse.y) {
             mouseAte.play();
-            this.total++;
+            this.miceAte++;
             return true;
         }
         else {
@@ -137,7 +134,6 @@ function Snake() {
         }
     }
 
-    //function for snake eating itself end game if it does
     this.eatItself = function () {
         for (let i = 0; i < this.snakeSize.length; i++) {
             if (this.x === this.snakeSize[i].x && this.y === this.snakeSize[i].y) {

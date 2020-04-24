@@ -4,8 +4,8 @@ function Mouse() {
 
     //function for random mouse spawn, get a random integer that isn't outside the canvas and inline with snake
     this.randomMouseSpawn = function () {
-        this.x = (Math.floor(Math.random() * rows - 1) + 1) * scale;
-        this.y = (Math.floor(Math.random() * colums - 1) + 1) * scale; 
+        this.x = (Math.floor(Math.random() * rows -1) + 1) * scale;
+        this.y = (Math.floor(Math.random() * columns -1) + 1) * scale; 
     }
 
     //draws mouse in the canvas
