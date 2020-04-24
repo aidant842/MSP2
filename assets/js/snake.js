@@ -60,6 +60,8 @@ function Snake() {
 
 
     this.moveUp = function () {
+        var buttonSound = new Audio(assets/sounds/arrowSound.wav);
+        buttonSound.play();
         if (this.ySpeed != (scale * 1)) {
             this.xSpeed = 0;
             this.ySpeed = -scale * 1;
@@ -70,6 +72,8 @@ function Snake() {
     }
 
     this.moveRight = function () {
+        var buttonSound = new Audio(assets/sounds/arrowSound.wav);
+        buttonSound.play();
         if (this.xSpeed != (-scale * 1)) {
             this.xSpeed = scale * 1;
             this.ySpeed = 0;
@@ -80,6 +84,8 @@ function Snake() {
     }
 
     this.moveDown = function () {
+        var buttonSound = new Audio(assets/sounds/arrowSound.wav);
+        buttonSound.play();
         if (this.ySpeed != (-scale * 1)) {
             this.xSpeed = 0;
             this.ySpeed = scale * 1;
@@ -90,6 +96,8 @@ function Snake() {
     }
 
     this.moveLeft = function () {
+        var buttonSound = new Audio(assets/sounds/arrowSound.wav);
+        buttonSound.play();
         if (this.xSpeed != (scale * 1)) {
             this.xSpeed = -scale * 1;
             this.ySpeed = 0;
