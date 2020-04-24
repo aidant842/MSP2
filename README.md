@@ -130,6 +130,7 @@ Below I have listed the programming languages, technologies, frameworks and reso
 * **Mentor** my code institute mentor for advice
 * **[Slack](https://slack.com/)** specifically the code institute room in slack
 * **[Piskel](https://www.piskelapp.com/)** to create sprites.
+* **[Grammarly](https://www.grammarly.com/)** to correct grammar and spelling mistakes.
  
 ## Testing
 * [HTML validator](https://validator.w3.org/#validate_by_input)
