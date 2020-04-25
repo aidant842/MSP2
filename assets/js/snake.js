@@ -7,7 +7,9 @@ function Snake() {
     this.miceAte = 0;
     this.snakeSize = [];
     var snakeTop = new Image();
-    snakeTop.src = "assets/images/head.png"
+    snakeTop.src = 'assets/images/head.png';
+    var snakeBody = new Image();
+    snakeBody.src = 'assets/images/snakeBody3.png';
 
 
     //Function to draw snake on canvas
@@ -21,7 +23,7 @@ function Snake() {
 
         //loop through snakeSize arrays length and draw each box at its x and y 
         for (let i = 0; i < this.snakeSize.length; i++) {
-            ctx.drawImage(this.snakeSize[i].x, this.snakeSize[i].y, scale, scale);
+            ctx.drawImage(snakeBody, this.snakeSize[i].x, this.snakeSize[i].y, scale, scale);
             ctx.strokeRect(this.snakeSize[i].x, this.snakeSize[i].y, scale, scale);
         }
     }
@@ -40,7 +42,7 @@ function Snake() {
         this.x = this.x + this.xSpeed;
         this.y = this.y + this.ySpeed;
 
-        if (this.x > canvas.width) {
+        if (this.x > (canvas.width - 1)) {
             End();
         }
 
@@ -48,7 +50,7 @@ function Snake() {
             End();
         }
 
-        else if (this.y > canvas.height) {
+        else if (this.y > (canvas.height - 1)) {
             End();
         }
 
@@ -60,7 +62,7 @@ function Snake() {
 
 
     this.moveUp = function () {
-        var buttonSound = new Audio('assets/sounds/arrowSound.wav');
+        var buttonSound = new Audio('assets/sounds/arrowPress.wav');
         buttonSound.play();
         if (this.ySpeed != (scale * 1)) {
             this.xSpeed = 0;
@@ -72,7 +74,7 @@ function Snake() {
     }
 
     this.moveRight = function () {
-        var buttonSound = new Audio('assets/sounds/arrowSound.wav');
+        var buttonSound = new Audio('assets/sounds/arrowPress.wav');
         buttonSound.play();
         if (this.xSpeed != (-scale * 1)) {
             this.xSpeed = scale * 1;
@@ -84,7 +86,7 @@ function Snake() {
     }
 
     this.moveDown = function () {
-        var buttonSound = new Audio('assets/sounds/arrowSound.wav');
+        var buttonSound = new Audio('assets/sounds/arrowPress.wav');
         buttonSound.play();
         if (this.ySpeed != (-scale * 1)) {
             this.xSpeed = 0;
@@ -96,7 +98,7 @@ function Snake() {
     }
 
     this.moveLeft = function () {
-        var buttonSound = new Audio('assets/sounds/arrowSound.wav');
+        var buttonSound = new Audio('assets/sounds/arrowPress.wav');
         buttonSound.play();
         if (this.xSpeed != (scale * 1)) {
             this.xSpeed = -scale * 1;
@@ -110,8 +112,8 @@ function Snake() {
 
 
     this.changeDirection = function (direction) {
-        var arrowSound = new Audio('assets/sounds/arrowPress.wav');
-        arrowSound.play();
+        /* var arrowSound = new Audio('assets/sounds/arrowPress.wav');
+        arrowSound.play(); */
         if (direction === 'ArrowUp') {
             this.moveUp();
         }
