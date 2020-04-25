@@ -3,17 +3,18 @@ function Mouse() {
     this.y;
 
     //function for random mouse spawn, get a random integer that isn't outside the canvas and inline with snake
-    this.randomMouseSpawn = function () {
+    this.mouseLocation = function () {
         let count = 0;
         let valid = true;
         while (true) {
             if (count > 100000) {
+                console.log('Game randomly ended');
                 End();
                 break;
             }
-            this.x = (Math.floor(Math.random() * rows - 1) + 1) * scale;
-            this.y = (Math.floor(Math.random() * columns - 1) + 1) * scale;
-            for (let i = 0; snake.snakeLength.length; i++) {
+            this.x = (Math.floor(Math.random() * rows - 1) + 1) * scale; // get a random integer within the confines of row in increments of 10
+            this.y = (Math.floor(Math.random() * colums - 1) + 1) * scale;
+            for (let i = 0; i < snake.snakeLength.length; i++) {
                 if (this.x === snake.snakeLength[i].x && this.y === snake.snakeLength[i].y) {
                     valid = false;
                     break;
