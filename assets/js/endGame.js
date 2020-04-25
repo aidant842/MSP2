@@ -5,6 +5,7 @@ var highScore = 0;
 function bestScore() {
     if (snake.miceAte > highScore) {
         highScore = snake.miceAte;
+        localStorage.setItem('highScore', highScore.toString());
     }
     return highScore;
 }

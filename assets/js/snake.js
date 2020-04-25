@@ -1,3 +1,6 @@
+//Variables
+var buttonSound = new Audio("assets/sounds/arrowPress.wav");
+
 //declaring snake function
 function Snake() {
     this.x = 0;
@@ -59,11 +62,13 @@ function Snake() {
         }
     }
 
-
+    playAudio = function(){
+        buttonSound.currentTime = 0;
+        buttonSound.play();
+    }
 
     this.moveUp = function () {
-        var buttonSound = new Audio('assets/sounds/arrowPress.wav');
-        buttonSound.play();
+        playAudio();
         if (this.ySpeed != (scale * 1)) {
             this.xSpeed = 0;
             this.ySpeed = -scale * 1;
@@ -74,8 +79,7 @@ function Snake() {
     }
 
     this.moveRight = function () {
-        var buttonSound = new Audio('assets/sounds/arrowPress.wav');
-        buttonSound.play();
+        playAudio();
         if (this.xSpeed != (-scale * 1)) {
             this.xSpeed = scale * 1;
             this.ySpeed = 0;
@@ -86,8 +90,7 @@ function Snake() {
     }
 
     this.moveDown = function () {
-        var buttonSound = new Audio('assets/sounds/arrowPress.wav');
-        buttonSound.play();
+        playAudio();
         if (this.ySpeed != (-scale * 1)) {
             this.xSpeed = 0;
             this.ySpeed = scale * 1;
@@ -98,8 +101,7 @@ function Snake() {
     }
 
     this.moveLeft = function () {
-        var buttonSound = new Audio('assets/sounds/arrowPress.wav');
-        buttonSound.play();
+        playAudio();
         if (this.xSpeed != (scale * 1)) {
             this.xSpeed = -scale * 1;
             this.ySpeed = 0;
@@ -112,8 +114,6 @@ function Snake() {
 
 
     this.changeDirection = function (direction) {
-        /* var arrowSound = new Audio('assets/sounds/arrowPress.wav');
-        arrowSound.play(); */
         if (direction === 'ArrowUp') {
             this.moveUp();
         }
