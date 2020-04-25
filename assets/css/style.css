@@ -375,15 +375,11 @@ html {
     list-style: none;
     position: relative;
     clear: none;
-    bottom: 19rem;
+    bottom: 28rem;
     left: -22rem;
     font-size: 1.5rem;
   }
   [id*="button"] {
-    display: none;
-  }
-
-  .controllerContainer img {
     display: none;
   }
 
