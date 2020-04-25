@@ -177,11 +177,14 @@ I had planned to use Jasmine for automated testing but due to time constraints I
 ### Errors
 Current errors:
  
-1. ***NOT YET FIXED*** Sounds not playing correctly for FireFox and Safari users.
+1. ***NOT YET FIXED*** Sounds not playing correctly for ~~FireFox and~~ Safari users. (partially fixed)
 2. ~~***NOT YET FIXED***  Sounds don't play correctly when using the mobile controls.~~ 
 3. ***NOT YET FIXED***  Snakes head does not rotate correctly with players movements.
-4. ***NOT YET FIXED***  Mouse is able to spawn on snakes current position
+4. ~~***NOT YET FIXED***  Mouse is able to spawn on snakes current position~~
 5. ***NOT YET FIXED***  Snake is able to turn back on itself if you change direction rapidly.
+6. ***NOT YET FIXED*** Mouse is able to spawn in the same location multiple times.
+7. ***NOT YET FIXED*** Issue with game ending "randomly". (know the source of the issue, need to think of a fix)
+8. ***NOT YET FIXED*** HighScore now saves to localStorage, however on refresh, localStorage can be overridden.
 ## Code Notes 
  
 I tried to make the game as easily playable as possible on mobiles, given my current knowledge and skills this was the best solution i could think of, i think it suffices but not the best solution. 
