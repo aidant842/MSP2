@@ -1,7 +1,7 @@
 // ******CREDIT TO W3 SCHOOLS*******
 
 function drop() {
-  document.getElementById('myDropdown').classList.toggle('show');
+    document.getElementById('myDropdown').classList.toggle('show');
 }
 
 window.onclick = function (event) {

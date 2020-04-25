@@ -8,7 +8,7 @@ function Snake() {
     this.xSpeed = 0;
     this.ySpeed = 0;
     this.miceAte = 0;
-    this.snakeSize = [];
+    this.snakeLength = [];
     var snakeTop = new Image();
     snakeTop.src = 'assets/images/head.png';
     var snakeBody = new Image();
@@ -24,10 +24,10 @@ function Snake() {
 
         ctx.drawImage(snakeTop, this.x, this.y, scale, scale);
 
-        //loop through snakeSize arrays length and draw each box at its x and y 
-        for (let i = 0; i < this.snakeSize.length; i++) {
-            ctx.drawImage(snakeBody, this.snakeSize[i].x, this.snakeSize[i].y, scale, scale);
-            ctx.strokeRect(this.snakeSize[i].x, this.snakeSize[i].y, scale, scale);
+        //loop through snakeLength arrays length and draw each box at its x and y 
+        for (let i = 0; i < this.snakeLength.length; i++) {
+            ctx.drawImage(snakeBody, this.snakeLength[i].x, this.snakeLength[i].y, scale, scale);
+            ctx.strokeRect(this.snakeLength[i].x, this.snakeLength[i].y, scale, scale);
         }
     }
 
@@ -35,12 +35,12 @@ function Snake() {
     this.update = function () {
 
         //moves tail to the left
-        for (let i = 0; i < this.snakeSize.length - 1; i++) {
-            this.snakeSize[i] = this.snakeSize[i + 1];
+        for (let i = 0; i < this.snakeLength.length - 1; i++) {
+            this.snakeLength[i] = this.snakeLength[i + 1];
         }
 
         //add the new box to the tail
-        this.snakeSize[this.miceAte - 1] = { x: (this.x), y: (this.y) };
+        this.snakeLength[this.miceAte - 1] = { x: (this.x), y: (this.y) };
 
         this.x = this.x + this.xSpeed;
         this.y = this.y + this.ySpeed;
@@ -62,7 +62,7 @@ function Snake() {
         }
     }
 
-    playAudio = function(){
+    playAudio = function () {
         buttonSound.currentTime = 0;
         buttonSound.play();
     }
@@ -145,8 +145,8 @@ function Snake() {
     }
 
     this.eatItself = function () {
-        for (let i = 0; i < this.snakeSize.length; i++) {
-            if (this.x === this.snakeSize[i].x && this.y === this.snakeSize[i].y) {
+        for (let i = 0; i < this.snakeLength.length; i++) {
+            if (this.x === this.snakeLength[i].x && this.y === this.snakeLength[i].y) {
                 End();
             }
         }

@@ -13,23 +13,23 @@ function Mouse() {
             }
             this.x = (Math.floor(Math.random() * rows - 1) + 1) * scale;
             this.y = (Math.floor(Math.random() * columns - 1) + 1) * scale;
-            for (let i = 0; snake.snakeLength.length; i++){
+            for (let i = 0; snake.snakeLength.length; i++) {
                 if (this.x === snake.snakeLength[i].x && this.y === snake.snakeLength[i].y) {
                     valid = false;
                     break;
                 }
             }
-            if(valid){
+            if (valid) {
                 break;
             }
             count++;
         }
     }
 
-        //draws mouse in the canvas
-        this.draw = function () {
-            var mouseImage = new Image();
-            mouseImage.src = 'assets/images/mouse.png';
-            ctx.drawImage(mouseImage, this.x, this.y, scale, scale);
-        }
+    //draws mouse in the canvas
+    this.draw = function () {
+        var mouseImage = new Image();
+        mouseImage.src = 'assets/images/mouse.png';
+        ctx.drawImage(mouseImage, this.x, this.y, scale, scale);
     }
+}

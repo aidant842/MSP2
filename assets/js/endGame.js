@@ -21,7 +21,7 @@ function End() {
     snake.xSpeed = 0;
     snake.ySpeed = 0;
     snake.miceAte = 0;
-    snake.snakeSize = [];
+    snake.snakeLength = [];
     this.gameOver();
 }
 
