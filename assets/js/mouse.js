@@ -3,7 +3,7 @@ function Mouse() {
     this.y;
 
     //function for random mouse spawn, get a random integer that isn't outside the canvas and inline with snake
-    this.mouseLocation = function () {
+    this.randomMouseSpawn = function () {
         let count = 0;
         let valid = true;
         while (true) {
