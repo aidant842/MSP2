@@ -33,18 +33,19 @@ html {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(181, 232, 83, 0.1), 0 0 10px rgba(181, 232, 83, 0.1);
   -webkit-font-smoothing: antialiased;
   text-align: center;
+  font-size: 1.5rem;
 }
 
 .mainHeading img:nth-child(1) {
   position: relative;
   bottom: -0.3rem;
-  width: 57px;
-  height: 33px;
+  width: 45.6px;
+  height: 26.4px;
 }
 
 .mainHeading img:nth-child(2) {
-  height: 25px;
-  width: 30px;
+  height: 20px;
+  width: 24px;
   bottom: 0;
 }
 
@@ -303,6 +304,28 @@ html {
   .instructionsContainer {
     font-size: 1.5rem;
   }
+
+  .mainHeading img:nth-child(1) {
+  position: relative;
+  bottom: -0.3rem;
+  width: 57px;
+  height: 33px;
+}
+
+.mainHeading img:nth-child(2) {
+  height: 25px;
+  width: 30px;
+  bottom: 0;
+}
+
+.mainHeading {
+  color: #a2f10b;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(181, 232, 83, 0.1), 0 0 10px rgba(181, 232, 83, 0.1);
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  font-size: 2rem;
+}
+
 }
 
 @media only screen and (min-width: 1025px) {
@@ -343,7 +366,7 @@ html {
   .col-12 {
     width: 100%;
   }
-  
+
   .instructionsContainer {
     color: #a2f10b;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(181, 232, 83, 0.1), 0 0 10px rgba(181, 232, 83, 0.1);
@@ -359,7 +382,29 @@ html {
   [id*="button"] {
     display: none;
   }
+
   .controllerContainer img {
     display: none;
   }
+
+  .mainHeading {
+  color: #a2f10b;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(181, 232, 83, 0.1), 0 0 10px rgba(181, 232, 83, 0.1);
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  font-size: 2rem;
+}
+
+  .mainHeading img:nth-child(1) {
+  position: relative;
+  bottom: -0.3rem;
+  width: 57px;
+  height: 33px;
+}
+
+.mainHeading img:nth-child(2) {
+  height: 25px;
+  width: 30px;
+  bottom: 0;
+}
 }

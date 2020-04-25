@@ -1,14 +1,14 @@
 //select difficulty
 document.getElementById('easy').onclick = function () {
-    easy()
+    easy();
 };
 
 document.getElementById('medium').onclick = function () {
-    easy()
+    medium();
 };
 
 document.getElementById('hard').onclick = function () {
-    easy()
+    hard();
 };
 
 //function to handle selected difficulty, difficulty based on interval time, increasing snakes speed
