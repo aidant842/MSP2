@@ -1,5 +1,5 @@
 //Variables
-var highScore = 0;
+var highScore = localStorage.getItem('highScore');
 
 //function for highScore
 function bestScore() {
