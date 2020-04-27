@@ -177,7 +177,7 @@ I had planned to use Jasmine for automated testing but due to time constraints I
 ### Errors
 Current errors:
  
-1. ***NOT YET FIXED*** Sounds not playing correctly for ~~FireFox and~~ Safari users. (partially fixed)
+1. ***NOT YET FIXED*** Sounds not playing correctly for FireFox and Safari users. (partially fixed, still occurs on lower powered machines for both browsers)
 2. ~~***NOT YET FIXED***  Sounds don't play correctly when using the mobile controls.~~ 
 3. ***NOT YET FIXED***  Snakes head does not rotate correctly with players movements.
 4. ~~***NOT YET FIXED***  Mouse is able to spawn on snakes current position~~
