@@ -1,5 +1,7 @@
 //Variables
 var buttonSound = new Audio("assets/sounds/arrowPress.wav");
+const AudioContext = window.AudioContext || window.webkitAudioContext;
+const audioCtx = new AudioContext();
 
 //declaring snake function
 function Snake() {
