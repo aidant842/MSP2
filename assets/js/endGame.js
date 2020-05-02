@@ -1,4 +1,5 @@
 //Variables
+var gameOver = new Audio('assets/sounds/gameOver.wav');
 var highScore = localStorage.getItem('highScore');
 
 //function for highScore
@@ -13,7 +14,7 @@ function bestScore() {
 //function to end the game
 
 function End() {
-    var gameOver = new Audio('assets/sounds/gameOver.wav');
+    gameOver.currentTime = 0;
     gameOver.play();
     document.querySelector('.highScore').innerText = 'HighScore: ' + bestScore();
     snake.x = 0;

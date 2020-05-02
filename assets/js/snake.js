@@ -1,8 +1,6 @@
 //Variables
 var buttonSound = new Audio("assets/sounds/arrowPress.wav");
-const AudioContext = window.AudioContext || window.webkitAudioContext;
-const audioCtx = new AudioContext();
-
+var mouseAte = new Audio("assets/sounds/shortEat.wav");
 //declaring snake function
 function Snake() {
     this.x = 0;
@@ -134,9 +132,9 @@ function Snake() {
 
 
     this.eatMouse = function (mouse) {
-        var mouseAte = new Audio("assets/sounds/shortEat.wav");
-
+        
         if (this.x === mouse.x && this.y === mouse.y) {
+            mouseAte.currentTime = 0;
             mouseAte.play();
             this.miceAte++;
             return true;

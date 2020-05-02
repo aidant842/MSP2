@@ -1,4 +1,7 @@
 //select difficulty
+const AudioContext = window.AudioContext || window.webkitAudioContext;
+const audioCtx = new AudioContext();
+
 document.getElementById('easy').onclick = function () {
     easy();
 };
