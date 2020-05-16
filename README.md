@@ -206,7 +206,7 @@ git clone https://github.com/aidant842/MSP2.git
 ## Credits
 ### Code
 * Drop down play game button [here](https://www.w3schools.com/howto/howto_js_dropdown.asp)
-* Some tutorials i watched [here](https://www.youtube.com/watch?v=9TcU2C1AACw&t=900s) and [here] https://www.youtube.com/watch?v=21eSpMtJwrc
+* Some tutorials i watched [here](https://www.youtube.com/watch?v=9TcU2C1AACw&t=900s) and [here] (https://www.youtube.com/watch?v=21eSpMtJwrc)
 * I found a template for this README in one of the channels in slack, however i can no longer remember where it was to credit the user who posted it.
  
 ### Images
