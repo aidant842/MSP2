@@ -5,7 +5,7 @@
   <img width="40%" src= "assets/images/headerImg.PNG">
 </p>
  
-<p align="center"><a href= 'https://aidant842.github.io/MSP2/'>
+<p align="center"><a href= 'https://aidant842.github.io/MSP2/' target = "_blank">
 Play Snake!</a></p>
  
 ## Table of Contents
@@ -114,7 +114,7 @@ Below I have listed the programming languages, technologies, frameworks and reso
 * **CSS3**
 * **Vanilla JS**
 * **Markdown**
-* **Visual Studio Code** development environment (GitHub was having issues when i was building this project so i decided to use VS Code for most of the development - i also used the liver server extension)
+* **Visual Studio Code** development environment (GitPod was having issues when i was building this project so i decided to use VS Code for most of the development - i also used the liver server extension)
 * **Git** for version control
 * **Github** to hold my project
 * **Github pages** to deploy my project to the web.
@@ -138,7 +138,7 @@ Below I have listed the programming languages, technologies, frameworks and reso
 * [JsHint](https://jshint.com)
 * Testing [checklist](https://geteasyqa.com/qa/test-website/)
  
-I used DevTools breakpoints to debug any JavaScript errors I encountered. During the development process I used  ```console.log()``` alot to check parts of my code were working correctly or functions were being called when they were supposed to be.
+I used DevTools breakpoints to debug some JavaScript errors that I encountered. During the development process I used  ```console.log()``` alot to check parts of my code were working correctly or functions were being called when they were supposed to be.
  
 I personally tested the game on some of my own personal systems of which include:
  
@@ -187,10 +187,11 @@ Current errors:
 8. ~~***NOT YET FIXED*** HighScore now saves to localStorage, however on refresh, localStorage can be overridden.~~
 ## Code Notes 
  
-I tried to make the game as easily playable as possible on mobiles, given my current knowledge and skills this was the best solution i could think of, i think it suffices but not the best solution. 
+I tried to make the game as easily playable as possible on mobiles by use of on screen arrow keys, given my current knowledge and skills this was the best solution i could think of, i think it suffices but not the best solution. 
  
- In this project I decided not to use any external libraries, I did this so I could get a good understanding of the languages I used.
- 
+In this project I decided not to use any external libraries, I did this so I could get a good understanding of the languages I used.
+
+There was an unfortunate amount of commits during the project i was using for testing as i was having issues with previews in GitPod during development.
 ## Deployment
 To deploy this project I used github pages.
 * Settings
@@ -207,7 +208,7 @@ git clone https://github.com/aidant842/MSP2.git
 ### Code
 * Drop down play game button [here](https://www.w3schools.com/howto/howto_js_dropdown.asp)
 * Some tutorials i watched [here](https://www.youtube.com/watch?v=9TcU2C1AACw&t=900s) and [here] https://www.youtube.com/watch?v=21eSpMtJwrc
-* I found a template for this README in one the channels in slack, however i can no longer remember where it was to credit the user who posted it.
+* I found a template for this README in one of the channels in slack, however i can no longer remember where it was to credit the user who posted it.
  
 ### Images
 * [Snake and Mouse](https://www.shutterstock.com/)
