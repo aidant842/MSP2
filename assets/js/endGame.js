@@ -23,11 +23,7 @@ function End() {
     snake.ySpeed = 0;
     snake.miceAte = 0;
     snake.snakeLength = [];
-    gameOver();
-}
-
-//function to turn off play and show play game button again
-function gameOver() {
     canPlay = false;
     document.getElementById('start').classList.toggle('hidden');
 }
+

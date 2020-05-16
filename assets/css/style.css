@@ -121,6 +121,7 @@ html {
   padding: 6px 16px;
   text-decoration: none;
   display: block;
+  cursor: pointer;
 }
 
 .dropdown-content a:hover {
@@ -144,7 +145,6 @@ html {
 .canvas {
   border: 1px solid white;
   position: relative;
-  /* background-color: #252627; */
   clear: none;
   background-color: #186f1d;
   background-image: -webkit-gradient(45deg, 0 0, 0 100%, color-stop(.5, rgba(255, 255, 255, .2)), color-stop(.5, transparent), to(transparent));
@@ -168,7 +168,6 @@ html {
 .highScore {
   position: relative;
   margin-left: 10rem;
-  /* left: 55%; */
   bottom: -2.3rem;
   color: #a2f10b;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(181, 232, 83, 0.1), 0 0 10px rgba(181, 232, 83, 0.1);
@@ -244,7 +243,7 @@ html {
 
 /* <----------------------------------------------------------------------------------------------------------------------------> */
 
-/* <-------- Styles for responsiveness (w3Schools.com) --------> */
+/* <-------- Styles for responsiveness (column based system from w3Schools.com) --------> */
 
 .row::after {
   content: "";

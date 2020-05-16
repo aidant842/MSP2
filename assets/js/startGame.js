@@ -1,7 +1,8 @@
-//select difficulty
+// Fixes Audio issues in Safari (caused by Safari not caching audio)
 const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();
 
+//Difficulty Select
 document.getElementById('easy').onclick = function () {
     easy();
 };
@@ -18,18 +19,18 @@ document.getElementById('hard').onclick = function () {
 var highScore = localStorage.getItem('highScore') || 0;
 document.querySelector('.highScore').innerText = 'HighScore: ' + highScore;
 
-//function to handle selected difficulty, difficulty based on interval time, increasing snakes speed
+//functions to handle selected difficulty, difficulty based on interval time, increasing snakes speed
 function easy() {
-    setup(150);
+    setup(200);
     document.getElementById('start').classList.toggle('hidden');
 }
 
 function medium() {
-    setup(100);
+    setup(140);
     document.getElementById('start').classList.toggle('hidden');
 }
 
 function hard() {
-    setup(60);
+    setup(100);
     document.getElementById('start').classList.toggle('hidden');
 }

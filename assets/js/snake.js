@@ -1,6 +1,7 @@
 //Variables
 var buttonSound = new Audio("assets/sounds/arrowPress.wav");
 var mouseAte = new Audio("assets/sounds/shortEat.wav");
+
 //declaring snake function
 function Snake() {
     this.x = 0;
@@ -20,8 +21,7 @@ function Snake() {
         ctx.fillStyle = "green";
         ctx.lineWidth = 1;
         ctx.strokeStyle = "black";
-
-
+        //Custom Sprite for Snake Head
         ctx.drawImage(snakeTop, this.x, this.y, scale, scale);
 
         //loop through snakeLength arrays length and draw each box at its x and y 
@@ -42,9 +42,10 @@ function Snake() {
         //add the new box to the tail
         this.snakeLength[this.miceAte - 1] = { x: (this.x), y: (this.y) };
 
-        this.x = this.x + this.xSpeed;
-        this.y = this.y + this.ySpeed;
+        this.x += this.xSpeed;
+        this.y += this.ySpeed;
 
+        //Check to see if snake goes outside canvas, if so, end game
         if (this.x > (canvas.width - 1)) {
             End();
         }
@@ -62,11 +63,13 @@ function Snake() {
         }
     }
 
+    //Audio function
     playAudio = function () {
         buttonSound.currentTime = 0;
         buttonSound.play();
     }
 
+    //Functions for each direction
     this.moveUp = function () {
         playAudio();
         if (this.ySpeed != (scale * 1)) {
@@ -112,24 +115,39 @@ function Snake() {
     }
 
 
-
+    //Function for direction change based on user input
     this.changeDirection = function (direction) {
         if (direction === 'ArrowUp') {
             this.moveUp();
         }
-        if (direction === 'ArrowRight') {
+        else if (direction === 'ArrowRight') {
             this.moveRight();
         }
-        if (direction === 'ArrowDown') {
+        else if (direction === 'ArrowDown') {
             this.moveDown();
         }
-        if (direction === 'ArrowLeft') {
+        else if (direction === 'ArrowLeft') {
             this.moveLeft();
         }
     }
 
+    // Mobile Controls
+    document.getElementById('buttonRight').onclick = function(){
+            snake.moveRight();
+    }
+
+    document.getElementById('buttonUp').onclick = function(){
+            snake.moveUp();
+    }
+    document.getElementById('buttonDown').onclick = function(){
+            snake.moveDown();
+    }
+    document.getElementById('buttonLeft').onclick = function(){
+            snake.moveLeft();
+    }
 
 
+    //Function to check did snake eat mouse
 
     this.eatMouse = function (mouse) {
         
@@ -143,6 +161,8 @@ function Snake() {
             return false;
         }
     }
+
+    //Function to check did snake eat itself
 
     this.eatItself = function () {
         for (let i = 0; i < this.snakeLength.length; i++) {
