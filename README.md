@@ -73,7 +73,7 @@ Some versions of Snake allow the user to pass through the game board barriers, i
  
 * I first made a basic design for mobile and tablet as this is where most of my expected users would be playing the game.
 * I then made a basic design for laptops
-* [Wireframes](assets\wireframes\snakeWireframes.pdf)
+* [Wireframes](wireframes/snakeWireframes.pdf)
  
 ### Design
 The design of this page is purposely basic and oldschool to give a nostalgic feeling.
