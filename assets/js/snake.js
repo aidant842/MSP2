@@ -133,17 +133,25 @@ function Snake() {
 
     // Mobile Controls
     document.getElementById('buttonRight').onclick = function(){
+        if (canPlay == true){
             snake.moveRight();
+        }    
     }
 
     document.getElementById('buttonUp').onclick = function(){
+        if (canPlay == true){
             snake.moveUp();
+        }    
     }
     document.getElementById('buttonDown').onclick = function(){
+        if (canPlay == true){
             snake.moveDown();
+        }    
     }
     document.getElementById('buttonLeft').onclick = function(){
+        if (canPlay == true){
             snake.moveLeft();
+        }    
     }
 
 
